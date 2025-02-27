@@ -17,17 +17,17 @@ document.body.appendChild(renderer.domElement);
 
 // Environment map
 const cubeTextureLoader = new THREE.CubeTextureLoader();
-cubeTextureLoader.setPath('/threejs-water-shader/');
+cubeTextureLoader.setPath('/');
 const environmentMap = cubeTextureLoader.load([
   'px.png', // positive x
-  'nx.png', // negative x 
+  'nx.png', // negative x
   'py.png', // positive y
   'ny.png', // negative y
   'pz.png', // positive z
   'nz.png'  // negative z
 ]);
 
-const poolTexture = new THREE.TextureLoader().load('/threejs-water-shader/ocean_floor.png');
+const poolTexture = new THREE.TextureLoader().load('/ocean_floor.png');
 
 scene.background = environmentMap;
 scene.environment = environmentMap;
